@@ -19,7 +19,7 @@ GND接到GND<br>
 接下來將在model_deploy的資料夾底下的wifi_mqtt/mqtt_client.py裡面的```host = "192.168.58.120"```給換成自己的VMware ip address.<br>
 
 3. 接下來就可以將B_L4S5I_IOT01A和notebook給接起來<br>
-圖片如下<br>
+![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/mbed_pc.jpg)<br>
 4. 然後輸入此command，將code給燒入B_L4S5I_IOT01A(要注意command裡面的那個ee2405v3那個要看自己的mbed-os-build是在哪個資料夾底下，來去做改變)<br>
 ```sudo mbed compile --source . --source ~/ee2405v3/mbed-os-build/ -m B_L4S5I_IOT01A -t GCC_ARM --profile tflite.json -f```
 5. 待燒入完成後，按下B_L4S5I_IOT01A的reset button(也就是在藍色按鈕旁邊的黑色按鈕)<br>
@@ -40,7 +40,7 @@ GND接到GND<br>
 (2) what are the results<br>
 一開始還沒執行python code的樣子<br>
 ![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/run_python_code.jpg)<br>
-輸入python code之後的模樣，進入到gesture UI mode了<br>
+執行wifi_mqtt/mqtt_client.py之後的模樣，進入到gesture UI mode了<br>
 ![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/gesture_UI.jpg)<br>
 選擇角度，紅色為目前所選擇的角度，第二章照片是screen上面會做出的反應(將判斷出選擇的動作給print出來)<br>
 ![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/gesture_UI_sel.jpg)<br>
