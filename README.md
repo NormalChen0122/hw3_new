@@ -16,7 +16,6 @@ GND接到GND<br>
 接下來在terminal上面打上```ip address```來查看自己的VMware ip address<br>
 接下來將在model_deploy的資料夾底下的mbed_app.json裡的SSID and PASSWORD給換成自己的網路熱點設定<br>
 接下來將在model_deploy的資料夾底下的main.cpp裡面的```const char* host = "192.168.58.120";```給換成自己的VMware ip address.<br>
-
 接下來將在model_deploy的資料夾底下的wifi_mqtt/mqtt_client.py裡面的```host = "192.168.58.120"```給換成自己的VMware ip address.<br>
 
 3. 接下來就可以將B_L4S5I_IOT01A和notebook給接起來<br>
@@ -40,14 +39,24 @@ GND接到GND<br>
 
 (2) what are the results<br>
 一開始還沒執行python code的樣子<br>
-(圖片)<br>
+![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/run_python_code.jpg)<br>
 輸入python code之後的模樣，進入到gesture UI mode了<br>
-(圖片)<br>
-選擇角度，紅色為目前所選擇的角度<br>
-選定角度,角度進入到tilt angle detection mode<br>
+![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/gesture_UI.jpg)<br>
+選擇角度，紅色為目前所選擇的角度，第二章照片是screen上面會做出的反應(將判斷出選擇的動作給print出來)<br>
+![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/gesture_UI_sel.jpg)<br>
+![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/gesture_UI_sel_screen.jpg)<br>
+選定角度,接著進入到tilt angle detection mode，螢幕上python會輸出接收到的選定角度，而mbed會在screen輸出要我們把板子放好<br>
+![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/confirm_sel.jpg)<br>
 要initialize角度之前(亮橘光)<br>
+![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/pre_initilize.jpg)<br>
 initialize完畢(亮藍光)<br>
+![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/initialize_over.jpg)<br>
+![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/initialize_over_screen.jpg)<br>
 將threshold angle(紅色)和current angle(綠色)給秀在uLCD上<br>
+![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/tilt_mode.jpg)<br>
 將B_L4S5I_IOT01A給傾斜超過threshold angle，此超過的angle由python讀取到並且輸出<br>
+![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/exceed_sel_ang.jpg)<br>
+![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/exceed_sel_ang_10times_screen.jpg)<br>
 當超過threshold angle的次數到達10次之後，回到gesture UI mode了<br>
+![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/back_to_gesture_UI_mode.jpg)<br>
 
