@@ -40,13 +40,15 @@ GND接到GND<br>
 (2) what are the results<br>
 一開始還沒執行python code的樣子<br>
 ![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/run_python_code.jpg)<br>
-執行wifi_mqtt/mqtt_client.py之後的模樣，進入到gesture UI mode了<br>
+執行wifi_mqtt/mqtt_client.py之後的模樣，進入到gesture UI mode了，第二張照片是LED1亮的樣子<br>
 ![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/gesture_UI.jpg)<br>
+![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/LED1_lightOn.jpg)<br>
 選擇角度，紅色為目前所選擇的角度，第二章照片是screen上面會做出的反應(將判斷出選擇的動作給print出來)<br>
 ![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/gesture_UI_sel.jpg)<br>
 ![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/gesture_UI_sel_screen.jpg)<br>
-選定角度,接著進入到tilt angle detection mode，螢幕上python會輸出接收到的選定角度，而mbed會在screen輸出要我們把板子放好<br>
+選定角度,接著進入到tilt angle detection mode，螢幕上python會輸出接收到的選定角度，而mbed會在screen輸出要我們把板子放好，，第二張照片是LED2亮的樣子<br>
 ![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/confirm_sel.jpg)<br>
+![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/LED2_lightOn.jpg)<br>
 要initialize角度之前(亮橘光)<br>
 ![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/pre_initilize.jpg)<br>
 initialize完畢(亮藍光)<br>
