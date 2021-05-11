@@ -62,3 +62,12 @@ initialize完畢(亮藍光)<br>
 當超過threshold angle的次數到達10次之後，回到gesture UI mode了<br>
 ![image](https://github.com/NormalChen0122/hw3_new/blob/master/hw3_picture/back_to_gesture_UI_mode.jpg)<br>
 
+在最後面講一下是怎麼實做code的<br>
+我以當初的mbed08的model_deploy為基礎開始架構其他環境<br>
+把mbed09的RPC和mbed10的wifi/mqtt環境也都架構好<br>
+接下來就是將gesture UI mode和tilt angle detection mode給分別寫成RPC function<br>
+而運作時的迴圈都會用done_mode0和done_mode1來當作繼續運作或停止的flag<br>
+所以也就可以想見，我要停止這兩個mode的function所要做的事情就是將done_mode1 = 1或是done_mode0 = 1<br>
+然後還有一個比較關鍵的就是因為RPC的function的parameter已經是固定的，也就是只有in和out，並沒有我們mqtt會用到的client<br>
+所以我是將其另成global<br>
+至於python code，我設了兩個client，分別用來接收超過的角度，以及設定的角度<br>
